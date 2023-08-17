@@ -368,7 +368,9 @@ namespace Web_API_ING.Controllers
                 //string Cmd = $"SELECT DQC892A || DQC892B || DQC892C WHERE DQC892A.LAST_UPD LIKE '%{item}%' " +
                 //	$"|| DQC892B.LAST_UPD LIKE '%{item}%' || DQC892C.LAST_UPD LIKE '%{item}%' " +
                 //	$"AND DQC892A.LOCATION ='{ob.Locaion}' ||  DQC892B.LOCATION ='{ob.Locaion}' || DQC892C.LOCATION ='{ob.Locaion}'";
-                string[] Cmd = { $"SELECT * FROM TMCP.DQC892A WHERE  LOCATION ='{ob.Locaion}' AND MO_SN ='{ob.sn}'", $"SELECT * FROM TMCP.DQC892B WHERE  LOCATION ='{ob.Locaion}' AND MO_SN ='{ob.sn}'", $"SELECT * FROM TMCP.DQC892C WHERE  LOCATION ='{ob.Locaion}' AND MO_SN ='{ob.sn}'" };
+                string[] Cmd = { $"SELECT * FROM TMCP.DQC892A WHERE  LOCATION ='{ob.Locaion}' AND MO_SN ='{ob.sn}'",
+                    $"SELECT * FROM TMCP.DQC892B WHERE  LOCATION ='{ob.Locaion}' AND MO_SN ='{ob.sn}'",
+                    $"SELECT * FROM TMCP.DQC892C WHERE  LOCATION ='{ob.Locaion}' AND MO_SN ='{ob.sn}'" };
 
                 foreach (string cmd in Cmd)
                 {
@@ -394,12 +396,12 @@ namespace Web_API_ING.Controllers
                                 LOAD_DT = DateTime.Parse(dr.ItemArray[3].ToString()),
                                 INSP_DT = DateTime.Parse( dr.ItemArray[4].ToString()),
                                 LINE_NO = dr.ItemArray[5].ToString(),
-                                ASSY_PN = dr.ItemArray[6].ToString(),
-                                ASSY_REV = dr.ItemArray[7].ToString(),
-                                DA = dr.ItemArray[9].ToString(),
-                                SON_PN = dr.ItemArray[10].ToString(),
-                                SUPPLIER_CODE = dr.ItemArray[11].ToString(),
-                                LOT_CD = dr.ItemArray[13].ToString(),
+                                ASSY_PN = dr.ItemArray[7].ToString(),
+                                ASSY_REV = dr.ItemArray[8].ToString(),
+                                DA = dr.ItemArray[10].ToString(),
+                                SON_PN = dr.ItemArray[11].ToString(),
+                                SUPPLIER_CODE = dr.ItemArray[12].ToString(),
+                                LOT_CD = dr.ItemArray[14].ToString(),
                                 DATE_CODE = dr.ItemArray[15].ToString(),
                                 LOAD_QTY = dr.ItemArray[17].ToString(),
                                 LOCATION = dr.ItemArray[19].ToString(),
