@@ -37,7 +37,6 @@ namespace Web_API_ING.Data
                 DS.Clear();
 
                 odbca.Fill(DS);
-
                 return DS.Tables[0];
         
         }
